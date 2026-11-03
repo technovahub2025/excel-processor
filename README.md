@@ -64,7 +64,7 @@ Open the URL printed by Vite (normally http://localhost:5173).
 - Excel workbooks with multiple sheets (select a sheet during upload).
 
 ## API docs
-With the backend running, visit http://127.0.0.1:8000/docs.
+With the backend running, visit https://excel-processor-tiht.onrender.com/docs.
 
 ## Troubleshooting
 - `.xls` support requires `xlrd`, included in requirements.

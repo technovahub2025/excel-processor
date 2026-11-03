@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react'
 import axios from 'axios'
 import { FileSpreadsheet, UploadCloud, ArrowRight, CheckCircle2, Download, Plus, Trash2, RefreshCw, AlertCircle, Filter, GitMerge } from 'lucide-react'
 
-const api = axios.create({ baseURL: 'http://127.0.0.1:8000' })
+const api = axios.create({ baseURL: 'https://excel-processor-tiht.onrender.com' })
 
 function App() {
   const [source, setSource] = useState(null)
