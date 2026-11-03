@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 import io
 import os
@@ -15,7 +15,11 @@ from rapidfuzz import fuzz, process
 app = FastAPI(title="Universal Excel Processor API", version="1.0.0")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    allow_origins=[
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+    ],
+    allow_origin_regex=r"^https://.*\.vercel\.app$",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -414,4 +418,5 @@ def get_session(file_id: str):
     if not item:
         raise HTTPException(status_code=404, detail="Session not found.")
     return {k: item[k] for k in ("filename", "sheets", "selected_sheet", "columns", "row_count", "preview") if k in item}
+
 
